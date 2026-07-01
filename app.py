@@ -8,7 +8,9 @@ import os
 app = FastAPI(title="SHL Assessment Recommender API")
 
 # Initialize SHLAgent
-CATALOG_PATH = "/home/aryan/shl-assessment/shl_product_catalog.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+CATALOG_PATH = os.path.join(BASE_DIR, "shl_product_catalog.json")
 agent = SHLAgent(CATALOG_PATH)
 
 class Message(BaseModel):
