@@ -3,7 +3,8 @@ from retriever import BM25Retriever, get_test_type
 from llm import call_llm
 
 class SHLAgent:
-    def __init__(self, catalog_path: str):
+    def __init__(self, 
+                 : str):
         self.retriever = BM25Retriever(catalog_path)
         self.catalog = self.retriever.catalog
         
